@@ -1,0 +1,10 @@
+version = 1
+
+strings = [
+    "it's dangerous to go alone",
+    "have you tried turning it off and on again",
+    "i am inevitable",
+    "obfuscation is not encryption",
+    "built for sentinel.bz",
+    "baba zyu was here",
+]

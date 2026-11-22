@@ -1,0 +1,40 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          components: rustfmt, clippy
+      - uses: Swatinem/rust-cache@v2
+      - name: Install luau (for behavioural tests)
+        run: |
+          curl -sSL https://github.com/luau-lang/luau/releases/latest/download/luau-ubuntu.zip -o luau.zip
+          unzip -o luau.zip
+          chmod +x luau luau-compile
+          sudo mv luau luau-compile /usr/local/bin/
+          command -v luau
+          command -v luau-compile
+          printf 'print("luau-smoke-ok:"..(6 * 7))\n' > luau_smoke.luau
+          out="$(luau luau_smoke.luau)"
+          echo "smoke output: $out"
+          test "$out" = "luau-smoke-ok:42"
+          rm -f luau_smoke.luau luau.zip
+      - name: Format
+        run: cargo fmt --all --check
+      - name: Clippy
+        run: cargo clippy --all-targets
+      - name: Build
+        run: cargo build --release
+      - name: Test
+        run: cargo test

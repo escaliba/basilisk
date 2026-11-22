@@ -1,0 +1,12 @@
+[package]
+name = "frontend"
+version.workspace = true
+edition.workspace = true
+publish.workspace = true
+
+[dependencies]
+ir.workspace = true
+full_moon.workspace = true
+# For BASIL_HASH: the macro pass must hash the SAME decoded bytes the VM/kget sees, so it reuses the
+# canonical Lua-string-literal decoder. Acyclic for the normal build (bytecode only dev-depends frontend).
+bytecode.workspace = true

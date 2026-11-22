@@ -1,0 +1,9 @@
+/target
+/playground/web/docs/MACROS.md
+/.wrangler/
+/tests/roblox/virtualized/
+**/*.rs.bk
+*.swp
+.DS_Store
+.idea/
+.vscode/

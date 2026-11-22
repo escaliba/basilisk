@@ -1,0 +1,4 @@
+# Rust build output for the wasm crate
+basilisk-wasm/target/
+# Generated wasm package (produced by build.sh)
+web/pkg/

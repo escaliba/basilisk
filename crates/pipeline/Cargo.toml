@@ -1,0 +1,30 @@
+[package]
+name = "pipeline"
+version.workspace = true
+edition.workspace = true
+publish.workspace = true
+
+[features]
+default = ["compile-gate"]
+# Embedded Luau post-build compile check (mlua/luau = C). Disabled for wasm targets.
+compile-gate = ["dep:mlua"]
+
+[dependencies]
+frontend.workspace = true
+ir.workspace = true
+bytecode.workspace = true
+passes.workspace = true
+vmgen.workspace = true
+surface.workspace = true
+anyhow.workspace = true
+zeroize = "1"
+mlua = { version = "0.10", features = ["luau"], optional = true }
+
+[dev-dependencies]
+frontend.workspace = true
+ir.workspace = true
+bytecode.workspace = true
+passes.workspace = true
+anyhow.workspace = true
+full_moon.workspace = true
+base64 = "0.22"

@@ -1,0 +1,8 @@
+print("arith", 3 + 4, 10 - 3, 6 * 7, 20 / 8, 20 // 8, 20 % 7, 2 ^ 8)
+print("concat", "a" .. "b" .. 1 .. 2)
+print("rel", 1 < 2, 2 <= 2, 3 > 4, 4 >= 4, 1 == 1, 1 ~= 2)
+print("logic", true and "y", false and "y", nil or "z", 1 and 2)
+print("unary", -5, not true, not nil, #"hello", #({ 1, 2, 3 }))
+print("prec", 2 + 3 * 4, (2 + 3) * 4, 2 ^ 2 ^ 3, -2 ^ 2)
+print("mix", 1 + 2 .. "!")
+print("chain", not (1 == 2) and (3 < 4 or 5 > 6))

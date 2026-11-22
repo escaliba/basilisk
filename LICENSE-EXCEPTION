@@ -1,0 +1,27 @@
+Basilisk generated-output exception
+===================================
+
+This is an additional permission that supplements the MIT License covering
+Basilisk (see the LICENSE file). It applies only to "generated output": the Luau
+scripts that the Basilisk tool produces as its output.
+
+Each generated output embeds portions of Basilisk's own VM runtime, which is part
+of this MIT-licensed project. As the copyright holders of that runtime, and for
+those embedded Basilisk portions only, we grant every user a perpetual,
+worldwide, non-exclusive, royalty-free, irrevocable permission to use, modify,
+distribute, and sell the generated output, with no obligation to reproduce the
+Basilisk MIT notice, this exception, or any attribution, in that output or in
+the materials that accompany it.
+
+This permission grants no rights over anything other than Basilisk's own embedded
+runtime. In particular:
+
+  - Your original source code, which you provide as input to Basilisk, remains
+    entirely yours. This exception neither claims nor grants any rights in it.
+  - Any third-party code remains under its own license. This exception does not
+    relicense it or waive its terms.
+
+The Basilisk source code in this repository is not "generated output" and remains
+under the MIT License in the LICENSE file. This exception adds a permission for
+generated output only; it does not modify or weaken the MIT License for the
+source.

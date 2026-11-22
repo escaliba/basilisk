@@ -1,0 +1,12 @@
+[package]
+name = "bytecode"
+version.workspace = true
+edition.workspace = true
+publish.workspace = true
+
+[dependencies]
+ir.workspace = true
+
+[dev-dependencies]
+frontend.workspace = true
+proptest = "1.11.0"

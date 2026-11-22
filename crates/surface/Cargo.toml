@@ -1,0 +1,12 @@
+[package]
+name = "surface"
+version.workspace = true
+edition.workspace = true
+publish = false
+license.workspace = true
+
+[dependencies]
+toml = "0.8"
+
+[dev-dependencies]
+proptest = "1.11.0"

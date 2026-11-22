@@ -1,0 +1,12 @@
+[package]
+name = "passes"
+version.workspace = true
+edition.workspace = true
+publish.workspace = true
+
+[dependencies]
+ir.workspace = true
+bytecode.workspace = true
+
+[dev-dependencies]
+frontend.workspace = true
